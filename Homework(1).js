@@ -1,3 +1,4 @@
+//variables and data types
 const chocolate = 15.678;
 const cookies = 123.965;
 const marshmallow = 90.2345;
