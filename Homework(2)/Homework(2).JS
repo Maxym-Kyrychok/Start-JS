@@ -15,5 +15,3 @@ if (isNaN(minNum) && isNaN(maxNum)) {
       }
 }
 console.log(sum);
-// console.log(isNaN(userNumber));
-// console.log(Number.isInteger(userNumber));
