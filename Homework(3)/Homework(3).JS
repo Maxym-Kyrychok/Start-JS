@@ -1,10 +1,9 @@
 //function 1
-const getMaxDigit = function () {
-  let number = prompt("Напишіть довільне число");
-  return Math.max(...number);
-};
+function getMaxDigit(number) {
+  return Math.max(...number.toString());
+}
 document.writeln(
-  `Функція #1 - найбільше серед введених чисел : ${getMaxDigit()}`
+  `Функція #1 - найбільше серед введених чисел : ${getMaxDigit(34567)}`
 );
 
 //function 2
@@ -23,4 +22,47 @@ function calcDegreeOfNumber(basis, degreeNum) {
 
 document.writeln(
   `<hr> Функція #2- ступінь заданого числа : ${calcDegreeOfNumber(-3, -3)}<hr>`
+);
+//function 3
+function editName(name) {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+}
+document.writeln(`<hr> Функція #3- виправлене ім'я : ${editName("мАКС")}<hr>`);
+//function 4
+function calculatTax(salary) {
+  const pensionFee = 18;
+  const militaryCollection = 1.5;
+  return salary - salary * 0.01 * (pensionFee + militaryCollection);
+}
+document.writeln(
+  `<hr> Функція #4- заробітня пласта після оподпткування : ${calculatTax(
+    5000
+  )}<hr>`
+);
+//function 5
+function getRandomNumber(max, min) {
+  let rand = min + Math.random() * (max + 1 - min);
+  return Math.floor(rand);
+}
+document.writeln(
+  `<hr> Функція #5- випадкове число в заданому діапазоні : ${getRandomNumber(
+    5,
+    10
+  )}<hr>`
+);
+//function 6
+function countLetter(latter, word) {
+  let count = 0;
+  for (let i = 0; i < word.length - 1; i++) {
+    if (word.charAt(i) === latter) {
+      count++;
+    }
+  }
+  return count;
+}
+document.writeln(
+  `<hr> Функція #6- рахує букви в слові : ${countLetter(
+    "а",
+    "Асталавіста"
+  )}<hr>`
 );
