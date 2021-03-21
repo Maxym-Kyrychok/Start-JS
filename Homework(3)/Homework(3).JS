@@ -83,3 +83,15 @@ document.writeln(
     "100UAH"
   )}<hr>`
 );
+//function 8
+function getRandomPassword(numberOfNumbers) {
+  let password = "";
+  for (let i = 0; i < (numberOfNumbers ?? 8); i++) {
+    password = password + getRandomNumber(1, 9).toString();
+  }
+  return password;
+}
+document.writeln(
+  `<hr> Функція #8- генерує пароль із заданої кількості символв або з 8 : ${getRandomPassword()}
+  <hr>`
+);
