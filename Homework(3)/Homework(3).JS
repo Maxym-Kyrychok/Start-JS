@@ -53,8 +53,8 @@ document.writeln(
 //function 6
 function countLetter(latter, word) {
   let count = 0;
-  for (let i = 0; i < word.length - 1; i++) {
-    if (word.charAt(i) === latter) {
+  for (let i = 0; i < word.length; i++) {
+    if (word.toLowerCase().charAt(i) === latter) {
       count++;
     }
   }
@@ -87,11 +87,27 @@ document.writeln(
 function getRandomPassword(numberOfNumbers) {
   let password = "";
   for (let i = 0; i < (numberOfNumbers ?? 8); i++) {
-    password = password + getRandomNumber(1, 9).toString();
+    password += getRandomNumber(1, 9).toString();
   }
   return password;
 }
 document.writeln(
   `<hr> Функція #8- генерує пароль із заданої кількості символв або з 8 : ${getRandomPassword()}
   <hr>`
+);
+//function 9
+function deleteLetters(letter, sentence) {
+  let clearSentence = "";
+  for (let i = 0; i < sentence.length; i++) {
+    if (sentence.charAt(i) !== letter) {
+      clearSentence += sentence.charAt(i);
+    }
+  }
+  return clearSentence;
+}
+document.writeln(
+  `<hr> Функція #9- видаляє літери з речення : ${deleteLetters(
+    "a",
+    "blabla"
+  )}<hr>`
 );
