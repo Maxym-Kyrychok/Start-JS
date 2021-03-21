@@ -66,3 +66,20 @@ document.writeln(
     "Асталавіста"
   )}<hr>`
 );
+//function 7
+function convertCurrency(currencyAmount) {
+  let convert = "";
+  if (currencyAmount.includes("UAH")) {
+    convert = (parseInt(currencyAmount).toString() / 27).toFixed(2) + "$";
+  } else if (currencyAmount.includes("$")) {
+    convert = (parseInt(currencyAmount).toString() * 27).toFixed(2) + "UAH";
+  } else {
+    return "Other currency is not convertible";
+  }
+  return convert;
+}
+document.writeln(
+  `<hr> Функція #7- конвертує $ в UAH і навпаки : ${convertCurrency(
+    "100UAH"
+  )}<hr>`
+);
