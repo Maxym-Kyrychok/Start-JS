@@ -111,3 +111,38 @@ document.writeln(
     "blabla"
   )}<hr>`
 );
+//function 10
+function isPalindrom(word) {
+  const withoutSpaces = word.toLowerCase().split(" ").join("");
+  let inwertedWord = "";
+  for (let i = withoutSpaces.length; i >= 0; i--) {
+    inwertedWord += withoutSpaces.charAt(i);
+  }
+  return inwertedWord === withoutSpaces;
+}
+document.writeln(
+  `<hr> Функція #10- перевіряє чи є слово паліндромом: ${isPalindrom(
+    "Я несу гусеня"
+  )}<hr>`
+);
+// function 11
+function deleteDuplicateLetter(sentence) {
+  const newSentence = sentence.toLowerCase().split(" ").join("");
+  let nonDuplicateLetter = "";
+  for (let i = 0; i < newSentence.length; i++) {
+    if (
+      newSentence.indexOf(newSentence.charAt(i)) ===
+      newSentence.lastIndexOf(newSentence.charAt(i))
+    ) {
+      nonDuplicateLetter += newSentence[i];
+      console.log("nonDuplicateLetter: ", nonDuplicateLetter);
+    }
+  }
+  return nonDuplicateLetter;
+}
+
+document.writeln(
+  `<hr> Функція #11- залишає тільки унікальні літери в речення : ${deleteDuplicateLetter(
+    "Бісквіт був дуже ніжним"
+  )}<hr>`
+);
